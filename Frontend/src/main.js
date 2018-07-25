@@ -1,0 +1,27 @@
+$(function(){
+    $("#tab1").click(function(){
+        $("#poem2").hide();
+        $("#poem3").hide();
+        $("#poem1").show();
+        $(this).addClass("active");
+        $("#tab3").removeClass("active");
+        $("#tab2").removeClass("active");
+    });
+    $("#tab2").click(function(){
+        $("#poem1").hide();
+        $("#poem3").hide();
+        $("#poem2").show();
+        $(this).addClass("active");
+        $("#tab1").removeClass("active");
+        $("#tab3").removeClass("active");
+    });
+    $("#tab3").click(function(){
+        $("#poem2").hide();
+        $("#poem1").hide();
+        $("#poem3").show();
+        $(this).addClass("active");
+        $("#tab1").removeClass("active");
+        $("#tab2").removeClass("active");
+    });
+});
+

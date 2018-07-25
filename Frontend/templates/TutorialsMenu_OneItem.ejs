@@ -1,0 +1,30 @@
+<%
+function getDescriptionArray(link) {
+    //Отримує вміст піци
+    var content = link.content;
+    var result = [];
+
+    //Object.keys повертає масив ключів в об’єкті JavaScript
+
+    Object.keys(content).forEach(function(key){
+
+        //a.concat(b) створює спільний масив із масивів a та b
+        result = result.concat(content[key]);
+    });
+    return result;
+}
+%>
+
+<div class="col-xs-12 col-md-6 col-lg-4">
+    <div class="thumbnail video-card">
+        <a target="_self" href=<%= link.location %>>
+        <img src="<%= link.icon %>">
+        <div class="about-video">
+            <div class="video-description">
+                <div class="name"><%= link.title %></div>
+            </div>
+        </div>
+        </a>
+        <p class="ex"><%= getDescriptionArray(link).join(", ") %></p>
+    </div>
+</div>
