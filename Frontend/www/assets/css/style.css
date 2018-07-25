@@ -51,7 +51,7 @@ body{
 	border: 1px solid #FFC31F;
 }
 
-@media(max-width: 700px){
+@media(max-width: 900px){
 	.tab{
 		border-radius: 6px;
 		display: block;
